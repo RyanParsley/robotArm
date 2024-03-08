@@ -1,5 +1,4 @@
 #![no_std]
-// Why do I get an error about "can't find crate for `test`?" on no_std?
 #![no_main]
 #![feature(type_alias_impl_trait)]
 

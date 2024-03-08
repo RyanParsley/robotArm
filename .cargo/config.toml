@@ -7,3 +7,7 @@ rustflags = ["-C", "link-args=-Tlink.x -Tlink-rp.x -Tdefmt.x"]
 
 [env]
 DEFMT_LOG = "debug"
+
+[[bin]]
+test = false
+bench = false
