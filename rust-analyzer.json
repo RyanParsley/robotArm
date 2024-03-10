@@ -1,0 +1,4 @@
+{
+  "cargo": { "target": "thumbv6m-none-eabi" },
+  "checkOnSave": { "allTargets": false }
+}
