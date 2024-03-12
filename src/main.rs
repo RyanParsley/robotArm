@@ -48,20 +48,7 @@ async fn main(_spawner: Spawner) {
     info!("Initialized.");
 
     loop {
-        /*
-         * TODO: When I use the 100k potentiometer, this unwrap fails gloriously
-         * [issue](https://github.com/RyanParsley/robotArm/issues/1).
-         */
-
-        /*
-         * What's the right way to handle that?
-         * Why does it happen?
-         *
-         * ERROR panicked at src/main.rs:37:47:
-         * called `Result::unwrap()` on an `Err` value: ConversionFailed
-         */
-
-        let level = adc.read(&mut pot1).await.unwrap_or(4095);
+        let level = adc.read(&mut pot1).await.unwrap();
         info!("Pot1 ADC: {:?}", level);
 
         Timer::after(Duration::from_millis(1000)).await;
