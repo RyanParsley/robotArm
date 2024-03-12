@@ -40,7 +40,9 @@ async fn main(_spawner: Spawner) {
      * Notes on Potentiometers and the Pico
      * ------------------------------------
      * Potentiometers need to be on ADC Ports so 26, 27 and 28 are the only appropriate pins.
-     * ADC_VREF and AGND are special power and ground for working with ADC.
+     *
+     * DON'T USE ADC_VREF!
+     * Use the standard 3v3 pin for power.
      */
 
     let mut pot1 = Channel::new_pin(peripherals.PIN_26, Pull::None);
